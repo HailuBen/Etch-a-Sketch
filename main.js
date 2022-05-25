@@ -16,7 +16,7 @@ function makeRows(rows, cols) {
 
     for (c = 0; c < (rows * cols); c++) {
         let cellDiv = document.createElement("div");
-        cellDiv.innerText = (c + 1);
+        // cellDiv.innerText = (c + 1);
         container.appendChild(cellDiv).className = "gridDiv";
     };
 };
