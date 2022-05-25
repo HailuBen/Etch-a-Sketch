@@ -20,5 +20,9 @@ function makeRows(rows, cols) {
         container.appendChild(cellDiv).className = "gridDiv";
     };
 };
+
+function newGrid() {
+    
+}
     
 makeRows(16, 16);
