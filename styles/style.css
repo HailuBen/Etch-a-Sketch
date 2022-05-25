@@ -3,8 +3,15 @@
     --grid-rows: 1:
 }
 
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
 body {
     padding: 0 3%;
+    background: rgb(144,144,144);
+    background: no-repeat linear-gradient(259deg, rgba(144, 144, 144, 0.726) 0%, rgba(107, 113, 121, 0.719) 100%); 
 }
 
 .blank-container {
