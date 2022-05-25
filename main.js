@@ -19,7 +19,7 @@ canvasButton.addEventListener("click", (e) => {
 })
 
 function newGrid() {
-    userMsg = prompt('Please enter the new size of the canvas.\n(e.g. enter 4 = 4x4 square grid)');
+    userMsg = prompt('Please enter the new size of the canvas.\n(e.g. enter 4 = 4x4 square grid)\nMAX: 100');
     if (userMsg === 'sugma') {
         document.body.innerHTML+='halow';
     }
