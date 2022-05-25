@@ -19,10 +19,17 @@ canvasButton.addEventListener("click", (e) => {
 
 function newGrid() {
     userNum = prompt('Please enter the new size of the canvas.\n(e.g. enter 4 = 4x4 square grid)\nMAX: 100');
-    if (userNum === parseInt(data, 10)) {
+    checkInput();
+}
+
+function checkInput() {
+    if (userNum==null||userNum==undefined||userNum=="") {
+        alert("Please enter something, anything! (Or hit Escape)");
+    }
+    else if (typeof(userNum) === 'string') {
         alert("Sorry, that is not a number. Enter a NUMBER (1-100)");
     }
-    else{
+    else if (typeof(userNum) === 'number'){
         alert("Good job *gives head pats*");
     }
 }
