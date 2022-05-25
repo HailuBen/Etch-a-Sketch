@@ -34,6 +34,11 @@ body {
     align-items: center;
 }
 
+.blank-container button {
+    margin-top: 10px;
+    padding: 6px;
+}
+
 .container-lid {
     display: grid;
     justify-content: center;
