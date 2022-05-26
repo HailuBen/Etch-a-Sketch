@@ -39,7 +39,7 @@ body {
     padding: 6px;
 }
 
-.container-lid {
+.canvas-container {
     display: grid;
     justify-content: center;
 }
