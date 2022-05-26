@@ -1,8 +1,6 @@
+function setUpEvents(){
+
 const gridContainer = document.getElementById("gridContainer");
-const canvasButton = document.getElementById("popup");
-let newCanvas;
-let newCanvasSize;
-let userNum;
 
 function makeRows(rows, cols) {
     gridContainer.style.setProperty('--grid-rows', rows);
@@ -13,14 +11,13 @@ function makeRows(rows, cols) {
     };
 };
 
-canvasButton.addEventListener("click", (e) => {
-    newCanvas=e.target.id;
-    newGrid();
-})
-
 function newGrid() {
-    userNum = prompt('Please enter the new size of the canvas.\n(e.g. enter 4 = 4x4 square grid)\nMAX: 100');
-    checkInput();
+    alert('Please enter the new size of the canvas.\n(e.g. enter 4 = 4x4 square grid)\nMAX: 100');
 }
 
 makeRows(16, 16);
+}
+
+window.onload = function(){
+    setUpEvents();
+};
