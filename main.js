@@ -16,6 +16,7 @@ function makeRows(rows, cols) {
 
 function newGrid() {
     alert('Please enter the new size of the canvas.\n(e.g. 4 = 4x4 square grid)\nMAX: 100');
+    inputContainerDisplay.style.display='flex';
 }
 newButton.addEventListener('click',newGrid);
 
