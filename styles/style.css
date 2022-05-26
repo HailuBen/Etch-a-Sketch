@@ -29,6 +29,22 @@ body {
     padding: 2em;
 }
 
+.grid-lid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1em);
+    grid-template-columns: repeat(var(--grid-cols), 1em);
+    border: 1px solid rgb(133, 133, 133);
+    width: fit-content;
+    padding: 2px;
+    background: white;
+}
+
 .gridDiv { 
     padding: 1fr;
     /* border: 1px solid #ddd; */
