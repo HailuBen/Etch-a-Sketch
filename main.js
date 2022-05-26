@@ -13,8 +13,9 @@ function makeRows(rows, cols) {
 };
 
 function newGrid() {
-    alert('Please enter the new size of the canvas.\n(e.g. enter 4 = 4x4 square grid)\nMAX: 100');
+    alert('Please enter the new size of the canvas.\n(e.g. 4 = 4x4 square grid)\nMAX: 100');
 }
+newButton.addEventListener('click',newGrid);
 
 makeRows(16, 16);
 }
