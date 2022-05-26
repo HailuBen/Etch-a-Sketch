@@ -2,6 +2,7 @@ const gridContainer = document.getElementById("gridContainer");
 const canvasButton = document.getElementById("popup");
 let newCanvas;
 let newCanvasSize;
+let userNum;
 
 function makeRows(rows, cols) {
     gridContainer.style.setProperty('--grid-rows', rows);
@@ -22,16 +23,4 @@ function newGrid() {
     checkInput();
 }
 
-function checkInput() {
-    if (userNum==null||userNum==undefined||userNum=="") {
-        alert("Please enter something, anything! (Or hit Escape)");
-    }
-    else if (typeof(userNum) === 'string') {
-        alert("Sorry, that is not a number. Enter a NUMBER (1-100)");
-    }
-    else if (typeof(userNum) === 'number'){
-        alert("Good job *gives head pats*");
-    }
-}
-    
 makeRows(16, 16);
