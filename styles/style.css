@@ -8,6 +8,13 @@ html, body {
     height: 100%;
 }
 
+.blank-container, .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 body {
     padding: 0 5%;
     background: rgb(144,144,144);
@@ -15,9 +22,6 @@ body {
 }
 
 .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-bottom: 30px;
 }
 
@@ -26,26 +30,18 @@ body {
     margin: 0%;
 }
 
-
 .blank-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px 10px 20px;
-    align-items: center;
+    padding: 10px;
 }
 
-.blank-container button {
-    margin-top: 10px;
+#newCanvasButton {
+    margin-top: 20px;
     padding: 6px;
 }
 
 .canvas-container {
     display: grid;
     justify-content: center;
-}
-
-.container-lid h3 {
-    margin: 0%;
 }
 
 #gridContainer {
