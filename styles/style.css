@@ -28,6 +28,10 @@ body {
     padding: 2em;
 }
 
+.title u, h1, h3 {
+    color: beige;
+}
+
 .grid-lid {
     display: flex;
     flex-direction: column;
