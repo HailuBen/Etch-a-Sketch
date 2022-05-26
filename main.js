@@ -1,9 +1,5 @@
 function setUpEvents(){
 
-const gridContainer = document.getElementById("gridContainer");
-const newButton = document.getElementById("newCanvasButton");
-const inputContainerDisplay =  document.querySelector('.input-container');
-inputContainerDisplay.style.display='none';
 
 function makeRows(rows, cols) {
     gridContainer.style.setProperty('--grid-rows', rows);
@@ -14,15 +10,9 @@ function makeRows(rows, cols) {
     };
 };
 
-function newGrid() {
-    alert('Please enter the new size of the canvas.\n(e.g. 4 = 4x4 square grid)\nMAX: 100');
-    inputContainerDisplay.style.display='flex';
-}
-newButton.addEventListener('click',newGrid);
 
 makeRows(16, 16);
 }
-
 window.onload = function(){
     setUpEvents();
 };
