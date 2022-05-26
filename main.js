@@ -1,6 +1,6 @@
 function setUpEvents(){
 
-    
+    const gridContainer = document.getElementById("gridContainer");
 
     function makeRows(rows, cols) {
         gridContainer.style.setProperty('--grid-rows', rows);
