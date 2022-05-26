@@ -10,29 +10,36 @@
 html, body {
     margin: 0;
     height: 100%;
+    width: 100%;
 }
 
 h1,h2,h3,h4,h5{
     margin: 0%;
+    color: white;
 }
 
-.title, .grid-lid, .ui-sect, .button-ui {
+header, .grid-lid, .ui, .input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 body {
-    padding: 0 5%;
     background: rgb(65, 65, 65);
 }
 
-.title {
-    padding: 1em;
+main {
+    padding: 0 5%;
+    color: whitesmoke;
 }
 
-.title u, h1, h3 {
-    color: rgb(255, 255, 255);
+header {
+    padding: 1fr;
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
 }
 
 .grid-lid {
@@ -41,11 +48,9 @@ body {
 
 #gridContainer {
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
     border: 1px solid rgb(133, 133, 133);
-    width: 60%;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     padding: 2px;
     background: white;
 }
@@ -65,29 +70,49 @@ body {
     background-color: red;
 }
 
-.ui-sect {
-    padding: 1em;
-    margin-top: 40px;
-}
 
-.button-ui {
+.ui {
+    padding: 40px;
     gap: 1em;
 }
 
-.button-ui button{
+button{
     font-size: 16px;
-    width: 100%;
+    width: 130px;
+    height: 100%;
     cursor: pointer;
-}   
-
-button {
-    border: 2px solid rgb(255, 255, 255);
+    border: none;
     border-radius: 5px;
-    transition: transform .2s ease-in-out,border-color .2s linear,background-color .2s linear;
-}
+    transition: transform .1s ease-in-out,background-color .2s linear;
+}   
 
 button:hover {
     transform: scale(1.1);
-    border-color: rgb(221, 236, 255);
     background-color: rgb(221, 236, 255);
+}
+
+#reset {
+    color: rgb(255, 0, 0);
+}
+
+#reset:hover {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+}
+
+/* footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }
