@@ -39,6 +39,12 @@ body {
     padding: 6px;
 }
 
+.input-label-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .canvas-container {
     display: grid;
     justify-content: center;
