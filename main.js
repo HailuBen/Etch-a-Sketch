@@ -1,6 +1,7 @@
 function setUpEvents(){
 
 const gridContainer = document.getElementById("gridContainer");
+const newButton = document.getElementById("newCanvasButton");
 
 function makeRows(rows, cols) {
     gridContainer.style.setProperty('--grid-rows', rows);
