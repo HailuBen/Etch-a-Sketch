@@ -2,7 +2,7 @@ function setUpEvents(){
 
     const gridContainer = document.getElementById("gridContainer");
 
-    function makeRows(rows, cols) {
+    function makeGrid(rows, cols) {
         gridContainer.style.setProperty('--grid-rows', rows);
         gridContainer.style.setProperty('--grid-cols', cols);
         for (c = 0; c < (rows * cols); c++) {
@@ -12,7 +12,7 @@ function setUpEvents(){
     };
 
 
-    makeRows(16, 16);
+    makeGrid(16, 16);
     }
 window.onload = function(){
     setUpEvents();
