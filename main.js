@@ -12,9 +12,9 @@ function setUpEvents(){
         for (let i = 0; i<gridArea; i++) {
             let gridItem = document.createElement('div');
             gridItem.id=i;
+            gridItem.classList.add('gridItem');
             gridContainer.style.gridTemplateColumns = `repeat(${gridNum}, 1fr)`;
             gridContainer.style.gridTemplateRows = `repeat(${gridNum}, 1fr)`;
-            gridItem.classList.add('gridItem');
             gridContainer.appendChild(gridItem);
         }
     };
