@@ -48,7 +48,8 @@ h3 {
 
 #gridContainer {
     display: grid;
-    border: 1px solid rgb(133, 133, 133);
+    border: 5px solid rgb(156, 156, 156);
+    border-radius: 5px;
     width: 400px;
     height: 400px;
     padding: 2px;
