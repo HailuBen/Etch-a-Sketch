@@ -56,7 +56,7 @@ h3 {
     background: white;
 }
 
-.gridDiv { 
+.gridItem { 
     padding: 1fr;
     /* border: 1px solid #ddd; */
     text-align: center;
@@ -65,7 +65,7 @@ h3 {
     transition-duration: 100s;
 }
 
-.gridDiv:hover{
+.gridItem:hover{
     opacity:100%;
     transition:background-color .1s ease-in-out;
     background-color: red;
