@@ -7,7 +7,7 @@
     let slider = document.getElementById('resize');
     let displaySliderSize = document.getElementById('sliderSize');
 
-    slider.onmousemove = (e) => displaySliderSize.innerHTML=(e.target.value)+'x'+(e.target.value)
+    slider.onmousemove = (e) => displaySliderSize.innerHTML=(e.target.value)+' x '+(e.target.value)
     slider.onchange = (e) => resizeGrid(e.target.value)
     
     let mouseDown = false
