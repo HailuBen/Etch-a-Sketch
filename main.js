@@ -6,6 +6,7 @@
     const resetBtn = document.getElementById('reset');
     let slider = document.getElementById('resize');
     let displaySliderSize = document.getElementById('sliderSize');
+    let gridItem;
 
     slider.onmousemove = (e) => displaySliderSize.innerHTML=(e.target.value)+' x '+(e.target.value)
     slider.onchange = (e) => resizeGrid(e.target.value)
@@ -24,7 +25,7 @@
         gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
         for (let i = 0; i<gridSize*gridSize; i++) {
-            let gridItem = document.createElement('div');
+            gridItem = document.createElement('div');
             gridItem.id=i;
             gridItem.classList.add('gridItem');
             gridItem.addEventListener('mouseover', draw)
@@ -35,7 +36,7 @@
 
     function draw(e) {
         if (e.type === 'mouseover' && !mouseDown) return
-        
+        eraseGrid();
     }
 
     // slider.addEventListener('beforeinput', function(){
@@ -50,6 +51,10 @@
     function resetGrid(){
         gridContainer.innerHTML= '';
         makeGrid(currentGridSize);
+    }
+
+    function eraseGrid(){
+        
     }
 
 window.onload = function(){
