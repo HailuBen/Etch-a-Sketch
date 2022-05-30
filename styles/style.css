@@ -105,8 +105,8 @@ main{
     display: grid;
     width: 600px;
     height: 600px;
-    background: rgb(250, 250, 230);
-    background-image: url(../img/corrugation-1920x1080.png);
+    background: #ebe3c1;
+    /* background-image: url(../img/corrugation-1920x1080.png); */
     border: 4px solid rgb(95, 56, 28);
     border-radius: 10px;
 }
@@ -139,8 +139,9 @@ main{
     padding: 20px 0px;
     margin: 20px 0 0 0;
     gap: 1em;
-    background-color: #f5f5dc;
+    background-color: #ebe3c1;
     background-image: url(../img/corrugation-1920x1080.png);
+    filter:blur(50%);
     border: 4px solid #5f381c;
     border-radius: 10px;
 }
