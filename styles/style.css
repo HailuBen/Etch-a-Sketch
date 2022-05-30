@@ -113,7 +113,7 @@ main{
 
 .gridItem { 
     text-align: center;
-    border:1px solid rgba(185, 185, 185, 0.5);
+    border:1px solid rgba(185, 185, 185, 0.26);
     transition-property:all;
     transition-duration: 100s;
 }
