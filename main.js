@@ -9,6 +9,9 @@
 
     slider.onmousemove = (e) => displaySliderSize.innerHTML=(e.target.value)+' x '+(e.target.value)
     slider.onchange = (e) => resizeGrid(e.target.value)
+    resetBtn.addEventListener('click', function(){
+        resetGrid();
+    })
     
     let mouseDown = false
     document.body.onmousedown = () => (mouseDown = true)
