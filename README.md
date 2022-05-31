@@ -1,2 +1,2 @@
-# Etch-a-Sketch
-A browser sketch pad
+# Etch-a-Sketch!
+[A browser sketch pad](https://hailuben.github.io/Etch-a-Sketch/ "Etch-a-Sketch website")
