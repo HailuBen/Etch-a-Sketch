@@ -222,7 +222,115 @@ main{
 }
 
 .slider{
+    -webkit-appearance: none;
     width: 170px;
+    height: 10px;
+    border-radius: 15px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1; 
+}
+.slider::-webkit-slider-thumb {
+    opacity: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4400ff; 
+    cursor: pointer; 
+    height: 25px;
+    border-radius: 50%;
+    text-shadow: none;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+    background-color: #ddd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(17, 0, 255)), to(rgba(194, 200, 255, 0)));
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgba(203, 217, 255, 0.158));
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	-webkit-transition: background-color .1s ease-out;
+	-moz-transition: background-color .1s ease-out;
+	-ms-transition: background-color .1s ease-out;
+	-o-transition: background-color .1s ease-out;
+	transition: background-color .1s ease-out;
+	background-clip: padding-box;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 50%;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+	text-shadow: 0 1px 0 rgba(255,255,255, .9);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.slider::-moz-range-thumb {
+    opacity: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4400ff; 
+    cursor: pointer; 
+    height: 25px;
+    border-radius: 50%;
+    text-shadow: none;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+    background-color: #ddd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(17, 0, 255)), to(rgba(194, 200, 255, 0)));
+	background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgba(203, 217, 255, 0.158));
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+	-webkit-transition: background-color .1s ease-out;
+	-moz-transition: background-color .1s ease-out;
+	-ms-transition: background-color .1s ease-out;
+	-o-transition: background-color .1s ease-out;
+	transition: background-color .1s ease-out;
+	background-clip: padding-box;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 50%;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+	text-shadow: 0 1px 0 rgba(255,255,255, .9);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+input[type="range" i] {
+    /* appearance: auto; */
+    cursor: pointer;
+    color: rgb(157, 150, 142);
+    padding: initial;
+    margin: 2px;
+}
+input{
+    border:2px solid #969696;
+    text-shadow: none;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+    background-color: #d4ceb1;
 }
 
 .button{
