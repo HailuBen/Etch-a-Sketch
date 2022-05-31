@@ -1,25 +1,41 @@
-function setUpEvents(){
+    const defaultGridSize = 16;
+    let currentGridSize = defaultGridSize;
+    const gridContainer = document.getElementById('gridContainer');
+    const specialBtn = document.getElementById('special');
+    const eraseBtn = document.getElementById('erase');
+    const resetBtn = document.getElementById('reset');
+    let slider = document.getElementById('resize');
+    let displaySliderSize = document.getElementById('sliderSize');
+    let gridItem;
 
-const gridContainer = document.getElementById("gridContainer");
-const newButton = document.getElementById("newCanvasButton");
+    slider.onmousemove = (e) => displaySliderSize.innerHTML=(e.target.value)+' x '+(e.target.value)
+    slider.onchange = (e) => resizeGrid(e.target.value)
+    resetBtn.addEventListener('click', function(){
+        resetGrid();
+    })
+    
+    let setGridSize = (newGridSize) => currentGridSize = newGridSize;
 
-function makeRows(rows, cols) {
-    gridContainer.style.setProperty('--grid-rows', rows);
-    gridContainer.style.setProperty('--grid-cols', cols);
-    for (c = 0; c < (rows * cols); c++) {
-        let cellDiv = document.createElement("div");
-        gridContainer.appendChild(cellDiv).className = "gridDiv";
+    function makeGrid(gridSize) {
+        gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+        gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+        for (let i = 0; i<gridSize*gridSize; i++) {
+            gridItem = document.createElement('div');
+            gridItem.id=i;
+            gridItem.classList.add('gridItem');
+            gridContainer.appendChild(gridItem);
+        }   
     };
-};
 
-function newGrid() {
-    alert('Please enter the new size of the canvas.\n(e.g. 4 = 4x4 square grid)\nMAX: 100');
-}
-newButton.addEventListener('click',newGrid);
-
-makeRows(16, 16);
-}
+    function resizeGrid(value){
+        setGridSize(value);
+        resetGrid();
+    }
+    function resetGrid(){
+        gridContainer.innerHTML= '';
+        makeGrid(currentGridSize);
+    }
 
 window.onload = function(){
-    setUpEvents();
+    makeGrid(defaultGridSize);
 };
