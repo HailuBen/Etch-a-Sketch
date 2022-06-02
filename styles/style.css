@@ -112,7 +112,7 @@ main{
     text-align: center;
     border:1px solid rgba(185, 185, 185, 0.26);
     transition-property:all;
-    transition-duration: 100s;
+    transition-duration: 180s;
 }
 .gridItem:hover{
     opacity:100%;
